@@ -42,6 +42,8 @@ Learning about React? Check out my book [React Distilled](https://sebhastian.com
 
 I faced the problem when I run `npm install` with node-gyp error.
 I solved by doing these stuffs.
+
+参考: [【2019年4月版】node-gyp と grpc のインストールに詰まったら。@macOS + node.js - Qiita](https://qiita.com/koinori/items/18dd11bae20e008a8532)
 ```sh
 # uninstall current node since it's not a LTS ver
 $ brew uninstall --force node
@@ -65,3 +67,4 @@ $ npm install
 # I actually AGAIN faced the same error though, npm audit fix could fix it.
 # Then, the local server started to run!! Yay!!
 ```
+
