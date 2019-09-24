@@ -37,3 +37,31 @@ const firebaseApp = firebase.initializeApp({
 ```
 
 Learning about React? Check out my book [React Distilled](https://sebhastian.com/react-distilled/)
+
+### Note
+
+I faced the problem when I run `npm install` with node-gyp error.
+I solved by doing these stuffs.
+```sh
+# uninstall current node since it's not a LTS ver
+$ brew uninstall --force node
+
+# install the newest nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+
+# re-launch your terminal or source .bashrc
+
+# Then, install LTS version of node
+$ nvm install --lts
+
+# install node-gyp
+$ npm install g node-gyp
+
+# I actually faced the problem again though, it said "do $npm audit fix" so, I followed that.
+
+# And finally,
+$ npm install
+
+# I actually AGAIN faced the same error though, npm audit fix could fix it.
+# Then, the local server started to run!! Yay!!
+```
